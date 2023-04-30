@@ -5,6 +5,19 @@ import Person from "./Person";
 const App = () => {
   const [people, setPeople] = useState(data);
 
-  return <Person people={people} />;
+  // clear list function
+  const clearList = () => {
+    setPeople([]);
+  };
+
+  return (
+    <>
+      <Person people={people} />
+      <button className='btn' onClick={clearList} style={{ margin: "2rem" }}>
+        click me
+      </button>
+      ;
+    </>
+  );
 };
 export default App;
