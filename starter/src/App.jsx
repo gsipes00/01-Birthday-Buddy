@@ -1,6 +1,5 @@
 import { useState } from "react";
 import data from "./data";
-
 import List from "./List";
 
 const App = () => {
@@ -12,14 +11,15 @@ const App = () => {
   };
 
   return (
-    <>
-      <h1>{people.length} Birthdays</h1>
-      <List people={people} />
-      <button className='btn' onClick={clearList} style={{ margin: "2rem" }}>
-        click me
-      </button>
-      ;
-    </>
+    <main>
+      <section className='container'>
+        <h1>{people.length} Birthdays</h1>
+        <List people={people} />
+        <button className='btn' onClick={clearList} style={{ margin: "2rem" }}>
+          click me
+        </button>
+      </section>
+    </main>
   );
 };
 export default App;
